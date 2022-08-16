@@ -7,6 +7,6 @@ WORKDIR /home/app/vuaida2
 COPY . .
 
 
-CMD ["node", "app.js"]
+CMD ["nodemon", "server.js"]
 
 EXPOSE 3300

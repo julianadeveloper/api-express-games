@@ -3,4 +3,6 @@
 
 npm install
 
-npm run app.js
+npm install nodemon
+
+nodemon server.js

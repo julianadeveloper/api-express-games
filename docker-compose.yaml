@@ -4,30 +4,30 @@ services:
   app:
     build: .
     entrypoint: sh ./.docker/entrypoint.sh
-    container_name: backend-v2
+    container_name: backend
     ports:
-      - 3300:3300
+      - 3330:3330
     restart: always
     volumes:
       - ./:/home/app/vuaida2
     tty: true
     networks:
       - backend-v2
-  database:
-    image: mongo:4.4
-    ports:
-      - 27017:27017
-    environment:
-      - MONGO_INITDB_ROOT_PASSWORD=root
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_DATABASE=produtos
-    volumes:
-      - mongodb_server_v2:/data/db
+#   database:
+#     image: mongo:4.4
+#     ports:
+#       - 27017:27017
+#     environment:
+#       - MONGO_INITDB_ROOT_PASSWORD=root
+#       - MONGO_INITDB_ROOT_USERNAME=root
+#       - MONGO_INITDB_DATABASE=produtos
+#     volumes:
+#       - mongodb_vuaida2:/data/db
 
-    networks:
-      - backend-v2
-volumes:
-  mongodb_server_v2:
+#     networks:
+#       - backend-v2
+# volumes:
+#   mongodb_vuaida2:
 
 networks:
   backend-v2:

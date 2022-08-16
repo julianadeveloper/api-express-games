@@ -1,4 +1,8 @@
 import express from "express";
+import mongoose from "mongoose";
+import db from "./config/dbConnection.js";
+
+//import database
 
 //impot dexpress
 const app = express();
@@ -56,15 +60,14 @@ app.put("/games/:id", (req, res) => {
   res.json(games);
 });
 
-app.delete("/games/:id", (req, res)=>{
-  let {id} = req.params;
+app.delete("/games/:id", (req, res) => {
+  let { id } = req.params;
   let index = buscaLivro(id);
   games.splice(index, 1);
-  res.json(games)
-  // games[index].id = 
-})
+  res.json(games);
+  // games[index].id =
+});
 //seria meu serviço de busca.
-
 
 function buscaLivro(id) {
   return games.findIndex((games) => games.id == id);
