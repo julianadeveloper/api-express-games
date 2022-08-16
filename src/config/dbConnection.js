@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
-import 'dotenv/config'
+import "dotenv/config";
 
-let db = mongoose.connect(process.env.MONGODB);
+mongoose.connect(process.env.MONGODB);
+let db = mongoose.connection;
+
 export default db;

@@ -1,47 +1,22 @@
 import express from "express";
-import mongoose from "mongoose";
+import games from "./models/games.js";
 import db from "./config/dbConnection.js";
-
 //import database
 
+db.on("error", () => console.log("Database connection failure")); 
+db.once("open", () => {
+  console.log("conectado ao banco com sucesso")
+});
 //impot dexpress
 const app = express();
-
-let games = [
-  {
-    id: 1,
-    nome: "Resident Evil 4",
-    ano: 2005,
-    valor: 99.9,
-    produtor: "Capcom",
-  },
-  {
-    id: 2,
-    nome: "God Of War 2",
-    ano: 2007,
-    valor: 99.9,
-    produtor: "Santa Mônica Studios",
-  },
-  {
-    id: 3,
-    nome: "GTA: San andreas",
-    ano: 2005,
-    valor: 99.9,
-    produtor: "Rockstar North",
-  },
-  {
-    id: 4,
-    nome: "Mortal Kombat",
-    ano: 2005,
-    valor: 99.9,
-    produtor: "Rockstar North",
-  },
-];
 
 app.use(express.json());
 
 app.get("/games", (req, res) => {
-  res.status(200).send(games);
+  //chamando colecao do mongo
+  games.find((err, games) => {
+    res.status(200).json(games);
+  });
 });
 
 app.get("/games/:id", (req, res) => {
@@ -50,13 +25,13 @@ app.get("/games/:id", (req, res) => {
 });
 
 app.post("/games", (req, res) => {
-  games.push(req.body);
-  res.status(201).send('livro cadastrado"');
+  games.create(games)
+  res.status(201).json(games);
 });
 
 app.put("/games/:id", (req, res) => {
   let index = buscaLivro(req.params.id);
-  games[index].nome = req.body.nome;
+  games[index].nome = req.body.nome;  
   res.json(games);
 });
 
