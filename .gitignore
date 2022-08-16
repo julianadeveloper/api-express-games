@@ -1,11 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/dotenv
 # Edit at https://www.toptal.com/developers/gitignore?templates=dotenv
 
-<<<<<<< HEAD
-### dotenv ###.
-=======
+
 ### dotenv ###
->>>>>>> 178e7c98dd1a2a41bf65ed8d9975f7f2ca88dd4e
-./.env
+.env
 
 # End of https://www.toptal.com/developers/gitignore/api/dotenv
