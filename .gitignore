@@ -2,6 +2,6 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=dotenv
 
 ### dotenv ###
-.env
+./.env
 
 # End of https://www.toptal.com/developers/gitignore/api/dotenv
