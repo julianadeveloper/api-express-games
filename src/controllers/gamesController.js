@@ -6,7 +6,12 @@ class gamesController {
       res.status(200).json(games);
     });
   };
-
+  static listByprodutora = (req, res) => {
+    const produtora = req.query.params;
+    games.find({ produtora: produtora }, {}, (err, games) => {
+      res.status(200).send(games);
+    });
+  };
   static findGameById = (req, res) => {
     const id = req.params.id;
     games.findById(id, (err, games) => {
@@ -43,7 +48,7 @@ class gamesController {
   };
   static deleteGames = (req, res) => {
     const id = req.params.id;
-    console.log(id)
+    console.log(id);
 
     games.findByIdAndDelete(id, (err) => {
       if (!err) {
