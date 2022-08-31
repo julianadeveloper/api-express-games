@@ -1,4 +1,3 @@
-
 import app from './src/app.js'
 // requisição http ( require / forma de import)
 // const http = require('http')

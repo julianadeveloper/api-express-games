@@ -1,0 +1,25 @@
+Apesar de já ter estudado e aplicado em um projeto, eu finalmente emiti meu certificado em Teste unitário e de integração utilizando o Jest/Supertest.
+
+
+
+O TDD (teste orientado ao desenvolvimento) é de extrema importância para que possamos ir verificando os resultados das nossas requisições em nossa aplicação, assim, evitando o máximo possível que a aplicação quebre ou apresente erros na integração após o desenvolvimento. 
+
+
+
+Na primeira tentativa, eu realizei os testes somente após finalizar meu backend. Desta vez resolvi criar uma API que consome uma database do mongo onde eu tenho um banco modelado para um 'e-commerce'. Apenas um CRUD simples, onde tenho relações entre documentos de uma loja de smartphones.  Essa API foi elaborada utilizando como base o curso de relacionamentos e cardinalidade (Mongodb) e o curso de Node.js - Criando uma API com express e Mongodb.
+
+
+
+link dos cursos:
+
+- Node.js: API Rest com Express e MongoDB
+
+https://cursos.alura.com.br/course/nodejs-api-rest-express-mongodb
+
+-  Modelagem MongoDB: relacionamentos e cardinalidade
+
+https://cursos.alura.com.br/course/mongodb-fundamentos-modelagem
+
+-Node.js: testes unitários e de integração
+
+ https://cursos.alura.com.br/course/nodejs-testes-unitarios-integracao
