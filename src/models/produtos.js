@@ -1,13 +1,3 @@
-// export class Produts{
-//   constructor(_id, nome, valor, produto){
-//     this.id = _id,
-//     this.nome = nome,
-//     this.valor = valor,
-//     this.produtor = produtor,
-
-//   }
-// }
-
 import mongoose from "mongoose"
 
 

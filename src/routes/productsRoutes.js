@@ -1,5 +1,6 @@
 import express from "express";
 import productsController from "../controllers/productsController.js";
+import lojasController from "../controllers/lojasController.js";
 
  const router = express.Router();
 
@@ -14,9 +15,10 @@ import productsController from "../controllers/productsController.js";
 
 router
 .get("/produtos", productsController.listproducts)
-.get("/produtos/produtor", productsController.listByprodutor)
+.get("/lojas", lojasController.findLojas)
 .get("/produtos/:id", productsController.findProductById)
 .post("/produtos", productsController.createproducts)
 .put("/produtos/:id", productsController.updateProducts)
 .delete("/produtos/:id", productsController.deleteproducts)
+
 export default router;
