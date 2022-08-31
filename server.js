@@ -3,7 +3,7 @@ import app from './src/app.js'
 // requisição http ( require / forma de import)
 // const http = require('http')
 //porta para listar o servidor
-const port = process.env.PORT || 3300
+const port = process.env.PORT 
 //requisição http + create server : criar um server q vai usar a requisição (express)
 // const server = http.createServer((req, res)=>{
 //   //req = requisição : parametro

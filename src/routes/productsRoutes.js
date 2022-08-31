@@ -1,6 +1,6 @@
 import express from "express";
 import productsController from "../controllers/productsController.js";
-
+import lojasController from "../controllers/lojasController.js";
  const router = express.Router();
 
 
