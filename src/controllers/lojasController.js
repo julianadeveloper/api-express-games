@@ -2,7 +2,7 @@ import shop from "../models/lojas.js";
 
 class lojasController {
 
-  static findLojas = (req, res)=>{
+  static findShop = (req, res)=>{
     shop.find((err, shop)=>{
       res.status(200).json(shop)
     })

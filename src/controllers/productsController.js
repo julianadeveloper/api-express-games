@@ -1,11 +1,19 @@
 import products from "../models/produtos.js";
+
 class productsController {
   static listproducts = (req, res) => {
     products.find((err, products) => {
       res.status(200).json(products);
     });
   };
-
+  //criar o list by loja
+  static listByprodutor = (req, res) => {
+    const produtor = req.query.produtor;
+    products.find({'produtor': produtor}, {}, (err, products) => {
+      console.log(products)
+      res.status(200).send(products);
+    });
+  };
   static findProductById = (req, res) => {
     const id = req.params.id;
     products.findById(id, (err, products) => {
