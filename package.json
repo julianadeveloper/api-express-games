@@ -17,5 +17,8 @@
     "express-generator": "^4.16.1",
     "mongoose": "^6.5.2",
     "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "jest": "^29.0.1"
   }
 }
